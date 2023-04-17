@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta4
+kind: Config
+metadata:
+  name: cronjob-end-time
+build:
+  artifacts:
+    - image: cronjob-end-time
+      context: .
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - cronjob.yaml
